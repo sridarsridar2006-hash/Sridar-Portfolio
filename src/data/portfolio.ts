@@ -13,7 +13,7 @@ export const profile = {
   phone: "8056752027",
   linkedin: "https://www.linkedin.com/in/sridar-sri-2a7a69327",
   // Not present on resume — update once available.
-  github: "https://github.com/sridarsridar2006-hashL",
+  github: "https://github.com/sridarsridar2006-hash",
   resumeFile: "/Sridar_M_Resume.pdf",
   headline: "Backend Developer & Machine Learning Enthusiast",
   subheadline:
