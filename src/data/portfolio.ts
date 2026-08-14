@@ -11,9 +11,9 @@ export const profile = {
   location: "Chennai, Tamil Nadu",
   email: "sridarsridar2006@gmail.com",
   phone: "8056752027",
-  linkedin: "https://www.linkedin.com/in/sridar-sri",
+  linkedin: "https://www.linkedin.com/in/sridar-sri-2a7a69327",
   // Not present on resume — update once available.
-  github: "YOUR_GITHUB_URL",
+  github: "https://github.com/sridarsridar2006-hashL",
   resumeFile: "/Sridar_M_Resume.pdf",
   headline: "Backend Developer & Machine Learning Enthusiast",
   subheadline:
