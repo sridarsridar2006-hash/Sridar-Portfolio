@@ -8,6 +8,7 @@ import {
   projects,
   skillCategories,
 } from "../data/portfolio";
+import { useProfilePhoto } from "../hooks/useProfilePhoto";
 
 const topSkills = skillCategories.slice(0, 3).flatMap((c) => c.skills.slice(0, 3));
 const topProjects = projects.slice(0, 2);
@@ -15,6 +16,7 @@ const primaryEducation = education[0];
 
 export default function RecruiterView() {
   const [open, setOpen] = useState(false);
+  const { photoUrl } = useProfilePhoto();
 
   return (
     <>
@@ -58,11 +60,24 @@ export default function RecruiterView() {
                 <X size={20} />
               </button>
 
-              <p className="eyebrow mb-1">30-Second Summary</p>
-              <h2 className="text-2xl font-display font-semibold">{profile.name}</h2>
-              <p className="text-accent text-sm mt-1">{profile.headline}</p>
+              <p className="eyebrow mb-3">30-Second Summary</p>
 
-              <div className="mt-6">
+              {/* Profile Header with Circle Shape Photo */}
+              <div className="flex items-center gap-4 mb-5 pb-5 border-b border-base-border">
+                <div className="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-accent to-accent-teal shrink-0 shadow-md">
+                  <img
+                    src={photoUrl}
+                    alt={profile.name}
+                    className="w-full h-full rounded-full object-cover bg-base-surface"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-xl font-display font-semibold text-base-text">{profile.name}</h2>
+                  <p className="text-accent text-xs mt-0.5 font-medium">{profile.headline}</p>
+                </div>
+              </div>
+
+              <div>
                 <h3 className="text-xs font-mono text-base-muted uppercase tracking-wide mb-2">
                   Top Skills
                 </h3>

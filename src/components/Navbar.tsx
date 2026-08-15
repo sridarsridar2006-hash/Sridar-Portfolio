@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Github, Linkedin, FileDown } from "lucide-react";
 import { nav, profile } from "../data/portfolio";
+import { useProfilePhoto } from "../hooks/useProfilePhoto";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { photoUrl } = useProfilePhoto();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -19,10 +21,20 @@ export default function Navbar() {
       }`}
     >
       <div className="section-shell flex items-center justify-between h-16">
-        <a href="#home" className="font-mono text-sm font-semibold text-base-text">
-          <span className="text-accent">&lt;</span>
-          {profile.initials}
-          <span className="text-accent">/&gt;</span>
+        <a href="#home" className="flex items-center gap-2.5 font-mono text-sm font-semibold text-base-text group">
+          {/* Circular avatar badge in navbar */}
+          <div className="w-8 h-8 rounded-full p-[1px] bg-gradient-to-tr from-accent to-accent-teal overflow-hidden shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+            <img
+              src={photoUrl}
+              alt={profile.name}
+              className="w-full h-full rounded-full object-cover bg-base-surface"
+            />
+          </div>
+          <span>
+            <span className="text-accent">&lt;</span>
+            {profile.initials}
+            <span className="text-accent">/&gt;</span>
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-7">

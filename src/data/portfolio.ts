@@ -12,9 +12,9 @@ export const profile = {
   email: "sridarsridar2006@gmail.com",
   phone: "8056752027",
   linkedin: "https://www.linkedin.com/in/sridar-sri-2a7a69327",
-  // Not present on resume — update once available.
   github: "https://github.com/sridarsridar2006-hash",
   resumeFile: "/Sridar_M_Resume.pdf",
+  avatarUrl: "/profile-photo.svg",
   headline: "Backend Developer & Machine Learning Enthusiast",
   subheadline:
     "I build backend systems that hold up under real use, and machine learning models that turn raw data into working predictions.",
@@ -44,7 +44,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Core Focus Area",
     note: "Primary area of interest and current specialization",
-    skills: ["Backend Development"],
+    skills: ["Backend Development,Frontend Development"],
   },
 ];
 

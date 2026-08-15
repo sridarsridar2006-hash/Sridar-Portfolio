@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import { certifications, education, profile, projects, skillCategories } from "../data/portfolio";
+import { useProfilePhoto } from "../hooks/useProfilePhoto";
 
 const techCount = new Set(skillCategories.flatMap((c) => c.skills)).size;
 const cgpaEntry = education.find((e) => e.score.toLowerCase().includes("cgpa"));
@@ -12,6 +13,8 @@ const stats = [
 ];
 
 export default function About() {
+  const { photoUrl } = useProfilePhoto();
+
   return (
     <section id="about" className="py-24 border-t border-base-border">
       <div className="section-shell">
@@ -22,7 +25,7 @@ export default function About() {
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid lg:grid-cols-5 gap-12">
+        <div className="mt-10 grid lg:grid-cols-5 gap-12 items-start">
           <Reveal delay={0.05} className="lg:col-span-3">
             <p className="text-base-muted leading-relaxed text-[15px]">
               {profile.summary}
@@ -37,7 +40,22 @@ export default function About() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.1} className="lg:col-span-2">
+          <Reveal delay={0.1} className="lg:col-span-2 space-y-4">
+            {/* Quick Profile Summary Card with Circle Photo */}
+            <div className="card-surface p-5 flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-accent to-accent-teal shrink-0 shadow-sm">
+                <img
+                  src={photoUrl}
+                  alt={profile.name}
+                  className="w-full h-full rounded-full object-cover bg-base-surface"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-base-text">{profile.name}</p>
+                <p className="text-xs text-base-muted font-mono">{profile.role}</p>
+              </div>
+            </div>
+
             <div className="grid grid-cols-2 gap-4">
               {stats.map((s) => (
                 <div key={s.label} className="card-surface p-5">
