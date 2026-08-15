@@ -147,7 +147,7 @@ export default function Hero() {
               {/* Status Badge Tag */}
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap px-3.5 py-1 rounded-full bg-base-card border border-base-border shadow-lg flex items-center gap-2 text-xs font-mono text-base-muted">
                 <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
-                <span>Backend Developer</span>
+                <span>Full Stack Developer</span>
               </div>
             </div>
 

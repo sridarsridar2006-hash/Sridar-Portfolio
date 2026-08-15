@@ -21,7 +21,7 @@ export default function About() {
         <Reveal>
           <p className="eyebrow mb-3">About</p>
           <h2 className="text-3xl sm:text-4xl font-semibold max-w-2xl">
-            Grounded in fundamentals, building toward backend engineering.
+            Grounded in fundamentals, building toward full stack engineering.
           </h2>
         </Reveal>
 

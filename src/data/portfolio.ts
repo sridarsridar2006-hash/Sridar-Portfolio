@@ -200,7 +200,7 @@ export const projects: Project[] = [
       "Model evaluation methodology",
     ],
     metricNote: "Model evaluation metric — available in project documentation",
-    github: "YOUR_GITHUB_URL",
+    github: "https://github.com/sridarsridar2006-hash",
     featured: true,
   },
   {
