@@ -7,7 +7,7 @@
 export const profile = {
   name: "Sridar M",
   initials: "SM",
-  role: "Backend Development & Applied Machine Learning",
+  role: "Full Stack Developer & Applied Machine Learning",
   location: "Chennai, Tamil Nadu",
   email: "sridarsridar2006@gmail.com",
   phone: "8056752027",
@@ -15,7 +15,7 @@ export const profile = {
   github: "https://github.com/sridarsridar2006-hash",
   resumeFile: "/Sridar_M_Resume.pdf",
   avatarUrl: "/profile-photo.svg",
-  headline: "Backend Developer & Machine Learning Enthusiast",
+  headline: "Full Stack Developer & Machine Learning Enthusiast",
   subheadline:
     "I build backend systems that hold up under real use, and machine learning models that turn raw data into working predictions.",
   summary:
