@@ -1,23 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Camera, FileDown, Github, Linkedin, MapPin, RotateCcw } from "lucide-react";
-import { ChangeEvent, useRef } from "react";
+import { ArrowRight, FileDown, Github, Linkedin, MapPin } from "lucide-react";
 import { profile } from "../data/portfolio";
 import { useProfilePhoto } from "../hooks/useProfilePhoto";
 
 export default function Hero() {
-  const { photoUrl, isCustom, uploadPhoto, resetPhoto } = useProfilePhoto();
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      try {
-        await uploadPhoto(file);
-      } catch (err) {
-        console.error("Failed to upload photo:", err);
-      }
-    }
-  };
+  const { photoUrl } = useProfilePhoto();
 
   return (
     <section id="home" className="relative overflow-hidden pt-32 pb-24">
@@ -120,27 +107,6 @@ export default function Hero() {
                     alt={profile.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-
-                  {/* Interactive Upload Photo Hover Overlay */}
-                  <label
-                    htmlFor="hero-profile-photo-input"
-                    className="absolute inset-0 bg-base-bg/75 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center text-white cursor-pointer transition-all duration-300 font-medium text-xs gap-1.5 p-2 text-center"
-                  >
-                    <div className="w-9 h-9 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center text-accent mb-0.5">
-                      <Camera size={18} />
-                    </div>
-                    <span>{isCustom ? "Change Photo" : "Upload Photo"}</span>
-                    <span className="text-[10px] text-base-muted font-normal">Click to browse file</span>
-                  </label>
-
-                  <input
-                    id="hero-profile-photo-input"
-                    ref={fileInputRef}
-                    type="file"
-                    accept="image/*"
-                    onChange={handleFileChange}
-                    className="hidden"
-                  />
                 </div>
               </div>
 
@@ -149,31 +115,6 @@ export default function Hero() {
                 <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
                 <span>Full Stack Developer</span>
               </div>
-            </div>
-
-            {/* Quick Upload / Reset Controls underneath circle */}
-            <div className="mt-6 flex items-center gap-3 text-xs">
-              <button
-                type="button"
-                onClick={() => fileInputRef.current?.click()}
-                className="text-accent hover:underline flex items-center gap-1 font-mono"
-              >
-                <Camera size={13} />
-                {isCustom ? "Change Photo" : "Upload Photo"}
-              </button>
-              {isCustom && (
-                <>
-                  <span className="text-base-border">•</span>
-                  <button
-                    type="button"
-                    onClick={resetPhoto}
-                    className="text-base-muted hover:text-red-400 flex items-center gap-1 font-mono transition-colors"
-                  >
-                    <RotateCcw size={12} />
-                    Reset
-                  </button>
-                </>
-              )}
             </div>
           </motion.div>
         </div>

@@ -14,7 +14,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/sridar-sri-2a7a69327",
   github: "https://github.com/sridarsridar2006-hash",
   resumeFile: "/Sridar_M_Resume.pdf",
-  avatarUrl: "/profile-photo.svg",
+  avatarUrl: "/profile-photo.jpg",
   headline: "Full Stack Developer & Machine Learning Enthusiast",
   subheadline:
     "I build backend systems that hold up under real use, and machine learning models that turn raw data into working predictions.",
@@ -98,7 +98,7 @@ export const projects: Project[] = [
       "Relational database design",
     ],
     metricNote: "Model evaluation metric — available in project documentation",
-    github: "YOUR_GITHUB_URL",
+    github: "https://github.com/sridarsridar2006-hash",
     featured: true,
   },
   {
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       "Applying ML to content moderation problems",
     ],
     metricNote: "Model evaluation metric — available in project documentation",
-    github: "YOUR_GITHUB_URL",
+    github: "https://github.com/sridarsridar2006-hash",
     featured: true,
   },
   {
@@ -164,7 +164,7 @@ export const projects: Project[] = [
       "Applying ML to disaster-response scenarios",
     ],
     metricNote: "Model evaluation metric — available in project documentation",
-    github: "YOUR_GITHUB_URL",
+    github: "https://github.com/sridarsridar2006-hash",
     featured: true,
   },
   {
@@ -236,7 +236,7 @@ export const projects: Project[] = [
       "Solving a real-world coordination problem",
     ],
     metricNote: "Model evaluation metric — available in project documentation",
-    github: "YOUR_GITHUB_URL",
+    github: "https://github.com/sridarsridar2006-hash",
     featured: true,
   },
 ];
